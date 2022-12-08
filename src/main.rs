@@ -30,7 +30,7 @@ async fn main() {
                 rand::gen_range(0, 255),
                 rand::gen_range(0, 255),
                 rand::gen_range(0, 255),
-                rand::gen_range(0, 255),
+                255,//rand::gen_range(0, 255),
             ),
         });
     }
@@ -58,7 +58,7 @@ async fn main() {
             }
         }
 
-        draw_text("FPS: ", 20.0, 20.0, 30.0, DARKGRAY);
+        draw_text(&format!("FPS: {}", macroquad::time::get_fps()), 20.0, 20.0, 30.0, DARKGRAY);
 
         next_frame().await
     }
