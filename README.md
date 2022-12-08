@@ -1,16 +1,16 @@
 # Run Natively
 
 ```
-cargo run
+cargo run --release
 ```
 
 # Run in Browser
 
 ```
 rustup target add wasm32-unknown-unknown
-cargo build --target wasm32-unknown-unknown
+cargo build --release --target wasm32-unknown-unknown
 cd test_html
-cp ../target/wasm32-unknown-unknown/debug/test-macroquad.wasm .
+cp ../target/wasm32-unknown-unknown/release/test-macroquad.wasm .
 python3 -m http.server
 ```
 
